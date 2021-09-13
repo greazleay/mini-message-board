@@ -1,0 +1,24 @@
+{
+  "name": "mini-message-board",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=mini-message-board:* npm run devstart"
+  },
+  "dependencies": {
+    "cookie-parser": "^latest",
+    "debug": "^latest",
+    "ejs": "^latest",
+    "express": "^latest",
+    "http-errors": "^latest",
+    "morgan": "^latest",
+    "mongoose": "^latest",
+    "express-validator": "^latest",
+    "luxon": "^latest"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

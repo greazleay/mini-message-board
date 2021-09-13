@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <h1>Mini Message Board</h1>
+      </nav>
+      <main>
+        <h1><%= title %></h1>
+        <p><%= message.user %></p>
+        <p><%- message.text %></p>
+        <p>Added: <%= message.since_added%> minutes ago</p>
+        <a href=<%=message.url+'/update'%>>Edit Message</a>
+        <a href=<%=message.url+'/delete'%>>Delete Message</a>
+      </main>
+    </div>
+  </body>
+</html>
