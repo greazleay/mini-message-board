@@ -15,16 +15,10 @@
       </nav>
       <main>
         <h1><%= title %></h1>
-        <form action="" method="post">
-          <label
-            >User:
-            <input type="text" name="user" value=<%=!message ? '' : message.user%> />
-          </label>
-          <label
-            >Message:
-            <textarea name="text"><%- !message ? '' : message.text%></textarea>
-          </label>
-          <button type="submit">Submit</button>
+        <form action="" method="post" class="message-form">
+            <input type="text" name="user" value="<%=typeof message === 'undefined' ? '' : message.user%>" placeholder="Name"/>
+            <textarea name="text" placeholder="Type your message here" rows="10" cols="33"><%- typeof message === 'undefined' ? '' : message.text%></textarea>
+            <button type="submit" class="submit-form">Submit</button>
         </form>
         <% if (typeof errors !== 'undefined') {errors.forEach(error => {%>
         <li><%=error.msg%></li>

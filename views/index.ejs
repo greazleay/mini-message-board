@@ -15,11 +15,11 @@
       </nav>
       <main>
         <h1>Welcome to <%= title %></h1>
-        <a href="/messages/message/message_form"><button>Add a new message</button></a>
+        <a href="/messages/message/message_form"><button class="new-message">New Message</button></a>
         <div class="messages">
           <% message_list.forEach(message => { %>
           <div class="message">
-            <p><%= message.user %></p>
+            <p><strong><%= message.user %></strong></p>
             <p><%- message.text %></p>
             <p>Added: <%= message.since_added%> minutes ago</p>
             <a href=<%= message.url%>>View Message</a>

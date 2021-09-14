@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -7,26 +9,27 @@
 }
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
 @media (max-width: 400px) {
   * {
-      font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
 @font-face {
-  font-family: '';
+  font-family: "";
   font-style: normal;
   font-weight: 600;
-  src: url('');
+  src: url("");
 }
 
 body {
-  background: url('') center/100% 100% no-repeat;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: url("") center/100% 100% no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
 }
 
@@ -40,7 +43,7 @@ body {
 
 nav {
   width: 100%;
-  background-color: #960096;
+  background-color: #007f96;
   display: flex;
   flex-flow: row wrap;
   flex: 1 1 0;
@@ -65,17 +68,58 @@ main {
   display: flex;
   flex-flow: wrap column;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
+}
+
+.new-message,
+.submit-form,
+.delete-message {
+  font-family: inherit;
+  font-size: 1em;
+  border: none;
+  height: 2em;
+  background-color: orangered;
+  color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .message {
-  border: solid 2px blue;
-  border-radius: 1rem;
+  border-bottom: solid 2px #57576e;
   margin: 1rem 0;
+  padding-bottom: 5px;
   width: 100%;
 }
 
-form {
+.message a {
+  text-decoration-line: none;
+}
+
+.message-form {
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 20em;
+  width: 20em;
+}
+
+.message-form input,
+textarea {
+  width: 100%;
+  font-size: 1.3em;
+}
+
+.message-detail {
+  border: 2px ridge #003cff50;
+  border-radius: 1em;
+  padding: 5px;
+  -webkit-box-shadow: 5px 5px 7px 5px #cec7c7;
+  box-shadow: 5px 5px 7px 5px #a38f8f;
+}
+
+.message-detail a {
+  display: block;
+  text-decoration-line: none;
+  margin-bottom: 5px;
 }
